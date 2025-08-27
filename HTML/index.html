@@ -4,6 +4,87 @@
         <meta charset="UTF-8">
         <title>Eli's Portfolio</title>
     </head>
+    <style>
+        /* Change something in settings to Word Wrap to keep everything on the screen */
+        @keyframes pulse{
+            0% {background-color: rgb(25, 90, 67);}
+            100% {background-color: rgba(156, 75, 46, 0.673);}
+        }
+        @keyframes cardRotate{
+            0% {transform: rotateY(0 deg);}
+            100% {transform: rotateY(180 deg);}
+        }
+        @keyframes grow{
+            0% {width: auto; height: auto;}
+            75% {width: 10%; height: 10%;}
+            100% {width: 13%; height: 13%;}
+        }
+        html{
+            animation: pulse 20s infinite alternate;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            padding-left: 2.5%;
+        }
+        h3{
+            margin: 0;
+            padding-left: 1.2%;
+        }
+        p.introduction{
+            text-align: center;
+            color: white;
+        }
+        #IMGcon{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            width: 95%;
+            margin: 0 auto;
+        }
+        .IMGdiv{
+            width: 32%;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .IMG{
+            border: 0.3em solid #555555;
+            border-radius: 20px;
+            /* box-shadow: 10px 2px 2px rgb(194, 6, 6); */
+            display: block;
+            
+        }
+        #IMG:hover{
+            animation: cardRotate 5s;
+        }
+        ul{
+            display: inline-block;
+            margin: auto auto;
+        }
+        a{
+            color: rgba(51, 49, 44, 0.641);
+            text-decoration: none;
+        }
+        a:hover{
+            animation-name: grow;
+            animation-duration: 4s;
+        }
+        a:visited{
+            color: rgba(51, 49, 44, 0.641);
+        }
+        .footer{
+            text-align: center;
+        }
+    </style>
     <body>
         <!--<div class="HR1div">
             <hr id="HR1">
@@ -11,7 +92,7 @@
         </div>-->
         <h1>Photography Portfolio</h1>
         <h2 style="text-align: center;">Who I Am</h2>
-        <p style="color: white">My name's Eli and I'm a new photographer located in the Chattanooga region. I photograph what I spend the most time around and find interesting. I hope you enjoy my various collections!</p>
+        <p class="introduction">My name's Eli and I'm a new photographer located in the Chattanooga region. I photograph what I spend the most time around and find interesting. I hope you enjoy my various collections!</p>
         <h3>Collections</h3>
         <hr>
         <ul>
@@ -23,97 +104,20 @@
         <hr>
         <div id="IMGcon">
             <div class="IMGdiv">
-                <img id="IMG" src="Barn in the Mountains.JPG" alt="An old barn in the valley"/>
+                <img class="IMG" src="Barn_in_the_Mountains.JPG" alt="An old barn in the valley"/>
             </div>
             <div class="IMGdiv">
-                <img id="IMG" src="A Place of Reflection.JPG" alt="An overlook overshadowing a valley with clouds"/>
+                <img class="IMG" src="A_Place_of_Reflection.JPG" alt="An overlook overshadowing a valley with clouds"/>
             </div>
             <div class="IMGdiv">
-                <img id="IMG" src="Fungi Growing in a Creek.JPG" alt="A fungus growing on the log creekside"/>
+                <img class="IMG" src="Fungi_Growing_in_a_Creek.JPG" alt="A fungus growing on the log creekside"/>
             </div>
             <div class="IMGdiv">
-                <img id="IMG" src="Edited DSC6092.png" alt="A row of vibrant flowers in the sunlight"/>
+                <img class="IMG" src="Edited_DSC6092.png" alt="A row of vibrant flowers in the sunlight"/>
             </div>
         </div>
     
         <!--JALLOS-->
-        <style>
-            /* Change something in settings to Word Wrap to keep everything on the screen */
-            @keyframes pulse{
-                0% {background-color: rgb(25, 90, 67);}
-                100% {background-color: rgba(156, 75, 46, 0.673);}
-            }
-            @keyframes cardRotate{
-                0% {transform: rotateY(0 deg);}
-                100% {transform: rotateY(180 deg);}
-            }
-            @keyframes grow{
-                0% {width: auto; height: auto;}
-                75% {width: 10%; height: 10%;}
-                100% {width: 13%; height: 13%;}
-            }
-            html{
-                animation: pulse 20s infinite alternate;
-                scroll-behavior: smooth;
-                margin: 0;
-                padding: 0;
-            }
-            body{
-                margin: 0;
-                padding: 0;
-            }
-            h1{
-                padding-left: 2.5%;
-            }
-            h3{
-                margin: 0;
-                padding-left: 1.2%;
-            }
-            #IMGcon{
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                justify-content: center;
-                gap: 20px;
-                width: 90%;
-                margin: 0 auto;
-            }
-            .IMGdiv{
-                width: 32%;
-            }
-            img{
-                width: 100%;
-                height: auto;
-            }
-            #IMG{
-                border: 0.3em solid #555555;
-                border-radius: 20px;
-                box-shadow: 50em rgb(194, 6, 6);
-                display: block;
-                
-            }
-            #IMG:hover{
-                animation: cardRotate 5s;
-            }
-            ul{
-                display: inline-block;
-                margin: auto auto;
-            }
-            a{
-                color: rgba(51, 49, 44, 0.641);
-                text-decoration: none;
-            }
-            a:hover{
-                animation-name: grow;
-                animation-duration: 4s;
-            }
-            a:visited{
-                color: rgba(51, 49, 44, 0.641);
-            }
-            .footer{
-                text-align: center;
-            }
-        </style>
+        <footer><p class="footer">&copy; Eli Noles</p></footer>
     </body>
-    <footer><p class="footer">&copy; Eli Noles</p></footer>
 </html>
