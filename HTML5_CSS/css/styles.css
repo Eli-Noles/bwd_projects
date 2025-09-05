@@ -93,7 +93,6 @@ nav{
     align-items: center;
     justify-content: center;
     animation: pulse2 20s infinite alternate;
-    background-image: linear-gradient(to bottom);
 }
 nav a{
     margin: 0px 1.5%;
