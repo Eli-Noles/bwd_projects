@@ -1,11 +1,11 @@
 /* Change something in settings to Word Wrap to keep everything on the screen */
 @keyframes pulse{
-    0% {background-color: rgba(149, 88, 65, 0.881);}
-    100% {background-color: rgb(25, 90, 67);}
+    0% {background-color: rgba(161, 229, 250, 0.881);}
+    100% {background-color: rgb(175, 246, 220);}
 }
 @keyframes pulse2{
-    0% {background-color: rgb(25, 90, 67);}
-    100% {background-color: rgba(157, 91, 66, 0.623);}
+    0% {background-color: rgba(204, 243, 255, 0.881);}
+    100% {background-color: rgb(175, 246, 220);}
 }
 /* @keyframes cardRotate{
     0% {transform: rotateY(0 deg);}
@@ -32,82 +32,96 @@
     0% {background-image: linear-gradient(to top left, green, black);}
     100% {background-image: linear-gradient(to bottom right, black, green);}
 }
+@keyframes merrygoround{
+    0% {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(3600deg);}
+}
+@keyframes slidein{
+    0% {transform: translateX(-8.3em);}
+    1% {transform: translateX(1.5em);}
+    95% {transform: translateX(1.5em);}
+    100% {transform: translateX(-8.3em);}
+}
+@keyframes slideout {
+    0% {transform: translateX(1.5em);}
+    1% {transform: translateX(-8.3em);}
+    95% {transform: translateX(-8.3em);}
+}
 html{
     animation: pulse 20s infinite alternate;
+    /* background-color: white; */
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 body{
     margin: 0;
     padding: 0;
 }
-main#contact_form{
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    width: 50%;
-    height: 400px;
-    background-color: #555555;
-}
-p#top{
-    margin: 2% 15%;
-}
-h2#big1{
-    font-size: 34.9px;
-    width: 25%;
-    margin: 1% 35%;
-    background-color: tan;
-    color: #555555;
-    border-radius: 20px;
-}
-hr.contact{
-    margin: 1% 0 0 0;
-}
-input{
-    width: 75%;
-    margin: 1% 12%;
-}
-button{
-    width: 25%;
-    height: 2em;
-    margin: 1% 37.5%;
-    border-radius: 25px;
+header{
+    width: 430px;
+    height: 85px;
+    position: absolute;
 }
 h1#head{
     position: absolute;
     font-family: 'Lucida Handwriting', 'Times New Roman';
+    font-size: 1.8rem;
+}
+#cursive_stroke{
+    margin: 47px 0 0 1%;
+    width: 90%;
+    height: 30px;
+    mix-blend-mode: multiply;
+}
+.headerhr{
+    width: 100%;
+    height: 3.1px;
+    background-color: black;
+    position: absolute;
+    margin: 69.61px 0 0 354px;
+    border: none;
 }
 .A{
-    margin: 0 40%;
+    text-align: center;
     color: blue;
     text-decoration: underline;
 }
-img.img1{
-    margin: 1% 33.5%;
+img#swirly{
+    /* border-radius: 120%; */
+    clip-path: circle(47%);
+    animation: merrygoround 95s infinite;
 }
 nav{
     height: 5em;
     width: 100%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     animation: pulse2 20s infinite alternate;
+
+    box-shadow: 0px 1px 25px rgba(204, 243, 255, 0.881);
 }
 nav a{
     margin: 0px 1.5%;
     padding: 10px;
     font-size: 18px;
     font-family: cursive;
-    color: olive;
+    color: black;
     background-color: darkgray;
     border-radius: 5px;
 }
+#nav{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 22.75px;
+}
+.subnav{
+    display: inline;
+}
 h1{
     padding-left: 2.5%;
-}
-h2{
-    text-align: center;
 }
 h3{
     text-align: center;
@@ -121,8 +135,8 @@ h3{
 }
 p.introduction{
     text-align: center;
-    color: aliceblue;
-    margin: 0px 1% 0 1%;
+    color: black;
+    margin: 0.5% 5% 0 5%;
     font-size: 1.2em;
 }
 div#ulcont{
@@ -147,13 +161,28 @@ li{
     width: 97%;
     margin: 0 auto;
 }
-img{
+.IMGh{
     width: 31%;
     height: fit-content;
 
     border: 0.3em solid #555555;
     border-radius: 20px;
     display: block;
+}
+.introhold{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+img.thoughtbubble{
+    mix-blend-mode: multiply;
+    position: absolute;
+    width: 245.377px;
+    height: 70px;
+    margin: 0.5% 0 0 0;
+
+    /* width: 31%;
+    height: fit-content; */
 }
 .IMGv{ /* Class specific to vertical images */
     border: 0.3em solid #555555;
@@ -176,16 +205,124 @@ a{
     animation-name: grow;
     animation-duration: 4s;
 } Figure out why this ain't workin*/
-a:visited{
-    color: rgba(51, 49, 44, 0.641);
-}
-p#end{
-    text-align: center;
-    color: aliceblue;
-    margin: 2% 15%;
-    font-size: 1.2em;
-}
 footer{
     text-align: center;
     margin: 10px 0;
+}
+
+/* CONTACT PAGE BEGINS*/
+main#contactpage{
+    display: flex;
+}
+div#contact_form{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 50%;
+    height: 400px;
+    background-color: #555555;
+}
+#sidebar_button{
+    mix-blend-mode: multiply;
+    border: none;
+    width: 5em;
+    height: 4em;
+    margin: 1em 0 0 1em;
+}
+#drpdwn_content{
+    transform: translateX(-8.3em);
+    animation: slideout 50s;
+    position: absolute;
+    height: 30em;
+}
+div#sidebar:hover #drpdwn_content{
+    display: block;
+    animation: slidein 50s;
+}
+ul.sidebar_nav{
+    list-style-type: none;
+}
+a.sidebar_nav{
+    background-color: #555555;
+    color: rgba(204, 243, 255, 0.881);
+    padding: 4px;
+}
+img.img1{
+    width: 31%;
+    height: auto;
+    margin: 1% 33.5%;
+}
+p#top{
+    margin: 2% 15%;
+}
+h2#big1{
+    font-size: 34.9px;
+    width: 25%;
+    margin: 1% 35%;
+    background-color: tan;
+    color: #555555;
+    border-radius: 20px;
+}
+hr.contact{
+    margin: 1% 0 0 0;
+}
+input{
+    width: 75%;
+    margin: 1% 12%;
+}
+button#submit{
+    width: 25%;
+    height: 2em;
+    margin: 1% 37.5%;
+    border-radius: 25px;
+}
+img#thanks{
+    mix-blend-mode: multiply;
+}
+h3.outro{
+    margin-top: 3.5em;
+}
+p.end{
+    text-align: center;
+    color: black;
+    margin: 0 15%;
+    font-size: 1.2em;
+}
+/* END CONTACT PAGE */
+/* ABOUT PAGE */
+section#section1{
+    display: flex;
+    flex-direction: row;
+}
+img#portrait{
+    transform: rotateZ(-8deg);
+    width: 25%;
+    height: fit-content;
+    margin: 3% 0 0 4%;
+    border-radius: 20px;
+}
+p#middle{
+    text-align: center;
+    margin: 5% 2%;
+    line-height: 0.97;
+}
+strong#title{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+em#em1{
+    font-family: 'Lucida Handwriting', 'cursive';
+    font-size: 79%;
+}
+img#portrait2{
+    transform: rotateZ(8deg);
+    width: 25%;
+    height: fit-content;
+    float: right;
+    margin: 6% 4% 0 0;
+    border-radius: 20px;
+}
+h2#aboutfb{
+    text-align: center;
+    font-size: 1.5em;
 }
