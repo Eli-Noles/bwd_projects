@@ -255,6 +255,11 @@ footer{
         height: fit-content;
     }
 }
+@media (max-width: 360px) {
+    #menuu{
+        margin-top: 16%;
+    }
+}
 /* CONTACT PAGE BEGINS*/
 main#contactpage{
     display: flex;
