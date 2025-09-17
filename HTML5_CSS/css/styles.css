@@ -239,7 +239,7 @@ footer{
 @media (max-width: 464px) {
     #menuu{
         position: absolute;
-        margin: 85px 45% 0 45%;
+        margin: 20% 45% 0 45%;
         /* width: 65px; */
     }
     nav{
