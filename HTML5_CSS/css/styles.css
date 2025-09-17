@@ -69,11 +69,14 @@ h1#head{
     font-family: 'Lucida Handwriting', 'Times New Roman';
     font-size: 1.8rem;
 }
-#cursive_stroke{
+img#cursive_stroke{
     margin: 47px 0 0 1%;
     width: 90%;
     height: 30px;
     mix-blend-mode: multiply;
+}
+img#mobile_banner{
+    display: none;
 }
 .headerhr{
     width: 100%;
@@ -231,6 +234,24 @@ footer{
     }
     i.fa-solid.fa-bars{
         font-size: 28px;
+    }
+}
+@media (max-width: 464px) {
+    #menuu{
+        position: absolute;
+        margin: 85px 45% 0 45%;
+        /* width: 65px; */
+    }
+    nav{
+        margin: 0 0 38px 0;
+    }
+    img#cursive_stroke, h1#head, hr.headerhr{
+        display: none;
+    }
+    img#mobile_banner{
+        display: block;
+        width: 100%;
+        height: fit-content;
     }
 }
 /* CONTACT PAGE BEGINS*/
