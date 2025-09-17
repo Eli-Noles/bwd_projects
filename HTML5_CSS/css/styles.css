@@ -117,6 +117,9 @@ nav a{
     padding: 0;
     margin-top: 22.75px;
 }
+#menuu{
+    display: none;
+}
 .subnav{
     display: inline;
 }
@@ -209,7 +212,27 @@ footer{
     text-align: center;
     margin: 10px 0;
 }
-
+@media (max-width: 1250px){
+    nav{
+        justify-content: right;
+    }
+    #menuu{
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        margin: 20px 10px 0 0;
+        /* margin-right: 10px; */
+        mix-blend-mode: multiply;
+        border: none;
+    }
+    #nav{
+        display: none;
+        
+    }
+    i.fa-solid.fa-bars{
+        font-size: 28px;
+    }
+}
 /* CONTACT PAGE BEGINS*/
 main#contactpage{
     display: flex;
