@@ -63,7 +63,7 @@ header{
     width: 100%;
     height: 85px;
     position: absolute;
-    z-index: -3;
+    /* z-index: -3; */
 }
 h1#head{
     position: absolute;
@@ -146,7 +146,7 @@ h3{
 p.introduction{
     text-align: center;
     color: black;
-    margin: 0.5% 5% 0 5%;
+    margin: 0.5% 20px 0 5%;
     font-size: 1.2em;
 }
 div#ulcont{
@@ -245,7 +245,14 @@ footer{
         font-size: 28px;
     }
 }
-
+@media (max-width: 1025px) {
+    p{
+        font-size: 1.9em;
+    }
+    p.introduction{
+        font-size: 1.9em;;
+    }
+}
 @media (max-width: 464px) {
     #menuu{
         position: absolute;
