@@ -37,15 +37,15 @@
     100% {transform: rotateZ(3600deg);}
 }
 @keyframes slidein{
-    0% {transform: translateX(-8.3em);}
+    0% {transform: translateX(-20em);}
     1% {transform: translateX(1.5em);}
     95% {transform: translateX(1.5em);}
     100% {transform: translateX(-8.3em);}
 }
 @keyframes slideout {
     0% {transform: translateX(1.5em);}
-    1% {transform: translateX(-8.3em);}
-    95% {transform: translateX(-8.3em);}
+    1% {transform: translateX(-20em);}
+    95% {transform: translateX(-20em);}
 }
 html{
     animation: pulse 20s infinite alternate;
@@ -78,14 +78,6 @@ img#cursive_stroke{
 }
 img#mobile_banner{
     display: none;
-}
-.headerhr{
-    width: 100%;
-    height: 3.1px;
-    background-color: black;
-    position: absolute;
-    margin: 69.61px 0 0 330px;
-    border: none;
 }
 .A{
     text-align: center;
@@ -150,10 +142,6 @@ p.introduction{
     margin: 0.5% 20px 0 5%;
     font-size: 1.2em;
 }
-div#ulcont{
-    display: flex;
-    justify-content: center;
-}
 ul{
     display: inline-block;
     width: 20%;
@@ -162,6 +150,10 @@ ul{
 li{
     color: black;
     text-decoration: none;
+}
+div#ulcont{
+    display: flex;
+    justify-content: center;
 }
 .IMGcon{
     display: flex;
@@ -220,78 +212,6 @@ footer{
     text-align: center;
     margin: 10px 0;
 }
-@media (max-width: 1250px){
-    nav{
-        justify-content: right;
-    }
-    #menuu{
-        display: block;
-        width: fit-content;
-        height: fit-content;
-        margin: 20px 10px 0 0;
-        /* margin-right: 10px; */
-        mix-blend-mode: multiply;
-        border: none;
-    }
-    .subnav:first-child{
-        margin-top: 18.5px;
-    }
-    #nav{
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s;
-        background-color: rgba(51, 49, 44, 0.641);
-        height: 230px;
-
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-    #nav.show {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0rem);
-    }
-    .fa-solid.fa-bars{
-        font-size: 2.5em;
-    }
-}
-@media (max-width: 1025px) {
-    p{
-        font-size: 1.9em;
-    }
-    p.introduction{
-        font-size: 1.9em;;
-    }
-}
-@media (max-width: 464px) {
-    header{
-        width: 100%;
-    }
-    #menuu{
-        position: absolute;
-        margin: 20% 45% 0 45%;
-        /* width: 65px; */
-    }
-    nav{
-        margin: 0 0 38px 0;
-        /* width: 100%; */
-    }
-    img#cursive_stroke, h1#head, hr.headerhr{
-        display: none;
-    }
-    img#mobile_banner{
-        display: block;
-        width: 100%;
-        height: fit-content;
-    }
-}
-@media (max-width: 360px) {
-    #menuu{
-        margin-top: 18%;
-    }
-}
 /* CONTACT PAGE BEGINS*/
 main#contactpage{
     display: flex;
@@ -312,10 +232,12 @@ div#contact_form{
     margin: 1em 0 0 1em;
 }
 #drpdwn_content{
-    transform: translateX(-8.3em);
+    transform: translateX(-20em);
     animation: slideout 50s;
     position: absolute;
     height: 30em;
+
+    background-color: #555555;
 }
 div#sidebar:hover #drpdwn_content{
     display: block;
@@ -407,4 +329,90 @@ img#portrait2{
 h2#aboutfb{
     text-align: center;
     font-size: 1.5em;
+}
+
+/* Media Queries */
+
+@media (max-width: 1250px){
+    nav{
+        justify-content: right;
+    }
+    #menuu{
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        margin: 20px 10px 0 0;
+        /* margin-right: 10px; */
+        mix-blend-mode: multiply;
+        border: none;
+    }
+    .subnav:first-child{
+        margin-top: 18.5px;
+    }
+    #nav{
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+        background-color: rgba(51, 49, 44, 0.641);
+        height: 230px;
+
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    #nav.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+    .fa-solid.fa-bars{
+        font-size: 2.5em;
+    }
+    #ulcont ul{
+        width: 100%;
+    }
+    #ulcont li{
+        font-size: 2em;
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 1025px) {
+    p{
+        font-size: 1.9em;
+    }
+    p.introduction{
+        font-size: 1.9em;
+    }
+    p.end{
+        font-size: 1.9em;
+    }
+}
+@media (max-width: 464px) {
+    header{
+        width: 100%;
+    }
+    #menuu{
+        position: absolute;
+        margin: 20% 45% 0 45%;
+        /* width: 65px; */
+    }
+    nav{
+        margin: 0 0 38px 0;
+        /* width: 100%; */
+    }
+    img#cursive_stroke, h1#head{
+        display: none;
+    }
+    img#mobile_banner{
+        display: block;
+        width: 100%;
+        height: fit-content;
+    }
+}
+@media (max-width: 360px) {
+    #menuu{
+        margin-top: 18%;
+    }
 }
