@@ -360,6 +360,7 @@ h2#aboutfb{
         align-items: center;
         flex-direction: column;
         gap: 30px;
+        width: 200px;
     }
     #nav.show {
         visibility: visible;
@@ -377,6 +378,9 @@ h2#aboutfb{
         width: 100%;
         text-align: center;
     }
+    .subnav:last-child{
+        margin-left: 12px;
+    }
 }
 @media (max-width: 1025px) {
     p{
@@ -387,6 +391,11 @@ h2#aboutfb{
     }
     p.end{
         font-size: 1.9em;
+    }
+    img.imgbig{
+        width: 80%;
+        height: fit-content;
+        margin: 1% 10%;
     }
 }
 @media (max-width: 464px) {
@@ -410,11 +419,11 @@ h2#aboutfb{
         width: 100%;
         height: fit-content;
     }
-    #nav{
-        margin-top: 100px;
-    }
     .portrait{
         display: none;
+    }
+    #nav{
+        margin-top: 30%;
     }
 }
 @media (max-width: 360px) {
