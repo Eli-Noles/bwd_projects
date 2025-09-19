@@ -400,7 +400,7 @@ h2#aboutfb{
     }
     nav{
         margin: 0 0 38px 0;
-        /* width: 100%; */
+        width: 100%;
     }
     img#cursive_stroke, h1#head{
         display: none;
@@ -411,9 +411,9 @@ h2#aboutfb{
         height: fit-content;
     }
     #nav{
-        margin-top: 200px;
+        margin-top: 100px;
     }
-    #portrait{
+    .portrait{
         display: none;
     }
 }
