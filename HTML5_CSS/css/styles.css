@@ -117,7 +117,7 @@ nav a{
     /* margin-left: 10%; */
     width: 35%;
 }
-#menuu{
+.menuu{
     display: none;
 }
 .subnav{
@@ -337,7 +337,7 @@ h2#aboutfb{
     nav{
         justify-content: right;
     }
-    #menuu{
+    .menuu{
         display: block;
         width: fit-content;
         height: fit-content;
@@ -393,7 +393,7 @@ h2#aboutfb{
     header{
         width: 100%;
     }
-    #menuu{
+    .menuu{
         position: absolute;
         margin: 20% 45% 0 45%;
         /* width: 65px; */
@@ -412,7 +412,7 @@ h2#aboutfb{
     }
 }
 @media (max-width: 360px) {
-    #menuu{
+    .menuu{
         margin-top: 18%;
     }
 }
