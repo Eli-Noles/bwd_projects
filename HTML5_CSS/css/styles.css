@@ -356,8 +356,8 @@ h2#aboutfb{
         background-color: rgba(51, 49, 44, 0.641);
         height: 230px;
 
-        align-items: center;
         display: flex;
+        align-items: center;
         flex-direction: column;
         gap: 30px;
     }
@@ -409,6 +409,12 @@ h2#aboutfb{
         display: block;
         width: 100%;
         height: fit-content;
+    }
+    #nav{
+        margin-top: 200px;
+    }
+    #portrait{
+        display: none;
     }
 }
 @media (max-width: 360px) {
