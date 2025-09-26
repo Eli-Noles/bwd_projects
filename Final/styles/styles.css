@@ -29,6 +29,7 @@ html{
 body{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 
     background-color: #151F26;
 }
@@ -113,9 +114,6 @@ a.h1-home{
     background-color: #8f8698f1;
     transform: rotateZ(3deg);
     transition: 0.275s;
-}
-.nav_a1{
-    margin-right: 15%;
 }
 .footer_p{
     text-align: center;
@@ -215,7 +213,7 @@ a.h1-home{
         background-color: #8f8698e2;
         border-radius: 20px;
         padding: 10px 0;
-        width: 60%;
+        width: 80%;
     }
     .nav-main-responsive.extend{
         animation: extend 2.5s ease-in-out forwards;
@@ -285,8 +283,23 @@ a.h1-home{
         left: 20%;
         transform: translateX(-20%);
     }
+    .nav-main-responsive{
+        width: 100%;
+    }
 }
 
+
+/* Main Page-Specific CSS */
+.background-video{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+/* END Main Page-Specific CSS */
 
 /* Contact-Specific CSS */
 .contact_body{
@@ -366,6 +379,7 @@ div.circle-clip{
     position: absolute;
     z-index: -1;
     box-shadow: 0 0 2em 1em #7B7B6D;
+    border-radius: 20px;
 }
 input.submit{
     width: 20%;
@@ -380,18 +394,70 @@ input.submit{
 textarea{
     resize: vertical;
 }
+.what-to-responsive-flexbox{
+    display: none;
+}
 /* Contact-Specific CSS Breakpoints */
+@media screen and (max-width: 1400px){
+    div.what-to-flexbox{
+        display: none;
+    }
+    div.what-to-responsive-flexbox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid rgba(240, 248, 255, 0.642);
+        width: 90%;
+        margin: 0 auto;
+    }
+    div.what-to-responsive-flexbox .flexh2{
+        width: 80%;
+        padding: 20px 0 10px 0;
+        border-top: 2px solid #608096;
+    }
+    div.what-to-responsive-flexbox .sub-what-to{
+        width: 80%;
+        /* padding: 10px 0 20px 0; */
+    }
+    .what-to-responsive-flexbox .flexh2:first-of-type{
+        border-top: none;
+        margin-top: 0;
+    }
+    .sub-what-to1, .sub-what-to3{
+        border: none;
+    }
+}
 @media screen and (max-width: 1300px){
     .contact_form{
         width: 60%;
-        margin: 4% 20% 0 20%;
+        margin-right: 17%;
+        margin-left: 17%;
     }
     
 }
 @media screen and (max-width: 900px){
     .contact_form{
         width: 80%;
-        margin: 4% 10% 0 10%;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 230px;
     }
-    
+    div.circle-clip{
+        clip-path: circle(70% at 50% 50%);
+        height: 300px;
+    }
+}
+@media screen and (max-width: 400px){
+    .contact_form{
+        margin-top: 240px;
+    }
+    div.circle-clip{
+        clip-path: circle(80% at 50% 50%);
+    }
+}
+@media screen and (max-width: 270px){
+    .contact_form{
+        margin-top: 300px;
+    }
 }
