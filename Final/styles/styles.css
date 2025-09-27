@@ -19,12 +19,24 @@
         height: 300px;
     }
 }
+@keyframes slidein{
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 ::-webkit-scrollbar{
     display: none;
 }
 html{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
 }
 body{
     margin: 0;
@@ -462,3 +474,202 @@ textarea{
         margin-top: 300px;
     }
 }
+
+
+/* Biblical Resources-Specific CSS */
+.resources_main{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* Aside */
+.resources_aside{
+    position: sticky;
+    top: 10px;
+    left: 2.5%;
+    width: 20%;
+    height: 90vh;
+    margin: 20px auto 0 auto;
+    background-image: radial-gradient(circle, #778288, #131c23);
+    border-radius: 50px;
+}
+.resources_h2{
+    text-align: center;
+    color: #151F26;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #778288;
+    border-radius: 20px;
+    width: 85%;
+    margin: 20px auto 10px auto;
+}
+.resources_ul{
+    padding: 0 5%;
+    margin: 0;
+}
+.resources_ul li{
+    list-style-type: none;
+    padding: 5px;
+    margin: 10px 0;
+    padding-left: 10px;
+    background-color: #8f8698ab;
+    width: 110%;
+    border-radius: 7px;
+
+    transform: scale(1);
+    transition: 0.3s;
+}
+.resources_ul li:hover{
+    background-color: #8f8698f1;
+    transform: scale(1.05);
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+.btn_aside{
+    display: block;
+    position: sticky;
+    top: 10px;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 3;
+}
+/* End Aside */
+/* Main Section */
+.resources_section{
+    width: 75%;
+    padding-bottom: 50px;
+}
+.r_h1{
+    width: fit-content;
+    margin: 10px auto 20px auto;
+    padding-right: 150px;
+    background-image: radial-gradient( #ffffff, #ffffff, yellow, yellow, yellow);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+}
+.r_h2{
+    width: fit-content;
+    margin: 20px 0 0 45%;
+    transform: translateX(-35%);
+    padding-right: 150px;
+    background-image: linear-gradient(to bottom left, #ff0000, #ffabab);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+.r_s{
+    color: rgba(240, 248, 255, 0.896);
+    font-size: 1.35em;
+    margin-left: 1.3%;
+}
+.r_p1{
+    font-size: 1.2em;
+    margin: 0 1% 20px 1%;
+    color: #6C6977;
+    text-shadow: 0.2px 0.2px 30px #ffffff;
+}
+p.church{
+    font-size: 1.2em;
+    margin: 10px 1% 20px 1%;
+    background-image: url("../images/Empy-Tomb.jpg");
+    background-position: center;
+    background-size: cover;
+    color: rgb(240, 248, 255);
+    text-shadow: 0 0 2px rgb(255, 255, 135);
+    width: 95%;
+    padding: 5px;
+    height: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+quote#q4{
+    position: absolute;
+    width: 300px;
+    right: 0;
+}
+.ytvideo{
+    display: block;
+    margin: 20px auto 0 auto;
+    border: 5px solid #202f39;
+    border-radius: 20px;
+}
+p.credit{
+    text-align: center;
+    font-size: 17px; 
+    margin-top: 10px;
+    color: rgba(240, 248, 255, 0.896);
+}
+.credit a{
+    color: #8f8698;
+    text-decoration: none;
+}
+.btn_aside{
+    display: none;
+}
+/* Biblical Resources-Specific CSS Breakpoints */
+@media screen and (max-width: 1400px){
+    /* .resources_main{
+        flex-direction: column;
+        align-items: center;
+    } */
+    .resources_section{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .r_h1{
+        font-size: 2em;
+        padding-right: 100px;
+    }
+    .r_h2{
+        font-size: 1.5em;
+        margin: 20px auto 0 auto;
+        transform: translateX(0);
+        padding-right: 100px;
+    }
+    .btn_aside{
+        display: block;
+        position: sticky;
+        top: 20px;
+        left: 10px;
+        margin: 0 0;
+    }
+    .btn_aside.hide{
+        display: none;
+    }
+    .resources_aside{
+        position: absolute;
+        transform: translateX(-300px);
+        top: 0;
+        left: 0;
+        /* width: %; */
+        height: auto;
+    }
+    .resources_aside.show_aside{
+        /* display: block; */
+        /* position: absolute; */
+        top: 100px;
+        left: 20px;
+        height: 100vh;
+        z-index: 4;
+        animation: slidein 3s;
+        transform: translateX(0);
+        background-image: radial-gradient(circle, #778288c0, #131c238d);
+    }
+    .resources_ul li{
+        background-color: #8f8698;
+    }
+    .btn_aside_back{
+        margin-left: 35%;
+        transform: translateX(-35%);
+        transform: rotateZ(180deg);
+        font-size: large;
+        width: 60px;
+        height: 60px;
+    }
+}
+/* End Biblical Resources-Specific CSS */

@@ -12,3 +12,17 @@ menuBtn.addEventListener("click", function () {
 menuBtn.addEventListener("click", function () {
   extend.classList.toggle("extend");
   });
+
+const asideBtn = document.getElementById("btn_aside");
+const asideBtnBack = document.getElementById("btn_aside_back");
+const asideResponsive = document.querySelector(".resources_aside");
+
+asideBtn.addEventListener("click", function () {
+  asideResponsive.classList.toggle("show_aside");
+  asideBtn.classList.toggle("hide");
+});
+
+asideBtnBack.addEventListener("click", function () {
+  asideResponsive.classList.remove("show_aside");
+  asideBtn.classList.remove("hide");
+});
