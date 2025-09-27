@@ -21,8 +21,8 @@
 }
 @keyframes slidein{
     from{
-        transform: translateX(-100px);
-        opacity: 0;
+        transform: translateX(-400px);
+        opacity: 0.75;
     }
     to{
         transform: translateX(0px);
@@ -608,18 +608,25 @@ p.credit{
     color: #8f8698;
     text-decoration: none;
 }
-.btn_aside{
+.btn_aside, .btn_aside_back{
     display: none;
 }
 /* Biblical Resources-Specific CSS Breakpoints */
 @media screen and (max-width: 1400px){
     /* .resources_main{
-        flex-direction: column;
-        align-items: center;
     } */
     .resources_section{
-        width: 95%;
+        width: inherit;
         margin: 0 auto;
+        flex-shrink:1;
+    }
+    .resources_section.main_opacity{
+        opacity: 0;
+        transition: opacity 3s ease-in;
+    }
+    .resources_section.main_opacity_remove{
+        opacity: 1 !important;
+        transition: opacity 3s ease-in !important;
     }
     .r_h1{
         font-size: 2em;
@@ -642,34 +649,44 @@ p.credit{
         display: none;
     }
     .resources_aside{
-        position: absolute;
-        transform: translateX(-300px);
+        /* position: absolute; */
+        transform: translateX(-400px);
+        transition-duration: 5s;
         top: 0;
         left: 0;
-        /* width: %; */
+        width: inherit;
         height: auto;
     }
+    .resources_aside.hide_aside{
+        /* display: none; */
+    }
     .resources_aside.show_aside{
-        /* display: block; */
-        /* position: absolute; */
-        top: 100px;
+        position: sticky;
+        top: 10px;
         left: 20px;
+        width: 80vw;
         height: 100vh;
         z-index: 4;
         animation: slidein 3s;
         transform: translateX(0);
-        background-image: radial-gradient(circle, #778288c0, #131c238d);
+        background-image: radial-gradient(circle, #778288, #131c23);
+        flex-shrink: 0;
     }
     .resources_ul li{
         background-color: #8f8698;
     }
     .btn_aside_back{
-        margin-left: 35%;
-        transform: translateX(-35%);
+        margin-left: 40%;
+        transform: translateX(-40%);
         transform: rotateZ(180deg);
         font-size: large;
+        padding: 0 20px;
         width: 60px;
         height: 60px;
+    }
+    .btn_aside_back.show{
+        display: block;
+        cursor: pointer;
     }
 }
 /* End Biblical Resources-Specific CSS */

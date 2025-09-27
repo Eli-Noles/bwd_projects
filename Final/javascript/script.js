@@ -16,13 +16,19 @@ menuBtn.addEventListener("click", function () {
 const asideBtn = document.getElementById("btn_aside");
 const asideBtnBack = document.getElementById("btn_aside_back");
 const asideResponsive = document.querySelector(".resources_aside");
+const mainContent = document.querySelector(".resources_section");
 
 asideBtn.addEventListener("click", function () {
   asideResponsive.classList.toggle("show_aside");
   asideBtn.classList.toggle("hide");
+  asideBtnBack.classList.toggle("show");
+  mainContent.classList.toggle("main_opacity");
 });
 
 asideBtnBack.addEventListener("click", function () {
   asideResponsive.classList.remove("show_aside");
+  asideResponsive.classList.add("hide_aside");
   asideBtn.classList.remove("hide");
+  asideBtnBack.classList.remove("show");
+  mainContent.classList.toggle("main_opacity_remove");
 });
