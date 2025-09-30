@@ -17,12 +17,15 @@ const asideBtn = document.getElementById("btn_aside");
 const asideBtnBack = document.getElementById("btn_aside_back");
 const asideResponsive = document.querySelector(".resources_aside");
 const mainContent = document.querySelector(".resources_section");
+const timerAside = document.getElementById('resources_aside');
 
 asideBtn.addEventListener("click", function () {
   asideResponsive.classList.toggle("show_aside");
   asideBtn.classList.toggle("hide");
   asideBtnBack.classList.toggle("show");
   mainContent.classList.toggle("main_opacity");
+  mainContent.classList.remove("main_opacity_remove");
+  timerAside.style.display = 'block';
 });
 
 asideBtnBack.addEventListener("click", function () {
@@ -31,4 +34,9 @@ asideBtnBack.addEventListener("click", function () {
   asideBtn.classList.remove("hide");
   asideBtnBack.classList.remove("show");
   mainContent.classList.toggle("main_opacity_remove");
+  mainContent.classList.remove("main_opacity");
+
+  setTimeout(function() {
+    timerAside.style.display = 'none';
+  }, 3000);
 });

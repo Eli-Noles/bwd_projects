@@ -586,6 +586,7 @@ p.church{
     height: fit-content;
     margin: 0 auto;
     text-align: center;
+    line-height: 2em;
 }
 quote#q4{
     position: absolute;
@@ -613,12 +614,9 @@ p.credit{
 }
 /* Biblical Resources-Specific CSS Breakpoints */
 @media screen and (max-width: 1400px){
-    /* .resources_main{
-    } */
     .resources_section{
-        width: inherit;
+        width: 95%;
         margin: 0 auto;
-        flex-shrink:1;
     }
     .resources_section.main_opacity{
         opacity: 0;
@@ -649,16 +647,13 @@ p.credit{
         display: none;
     }
     .resources_aside{
-        /* position: absolute; */
+        display: none;
         transform: translateX(-400px);
         transition-duration: 5s;
         top: 0;
         left: 0;
         width: inherit;
         height: auto;
-    }
-    .resources_aside.hide_aside{
-        /* display: none; */
     }
     .resources_aside.show_aside{
         position: sticky;
@@ -687,6 +682,12 @@ p.credit{
     .btn_aside_back.show{
         display: block;
         cursor: pointer;
+    }
+}
+@media screen and (max-width: 500px){
+    .ytvideo{
+        width: 90%;
+        height: 200px;
     }
 }
 /* End Biblical Resources-Specific CSS */
