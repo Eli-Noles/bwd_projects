@@ -331,11 +331,11 @@ h1.loading, p.loading{
     left: 50vw;
     transform: translateX(-50%);
     animation: loaders 8s reverse;
-    width: 40vw;
-    height: 415px;
+    width: 60vw;
+    height: 375px;
 }
 .down_arrow{
-    margin-top: 120px;
+    margin-top: 140px;
     margin-left: 50vw;
     transform: translateX(-50%);
     width: 60px;
