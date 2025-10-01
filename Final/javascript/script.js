@@ -18,6 +18,7 @@ const asideBtnBack = document.getElementById("btn_aside_back");
 const asideResponsive = document.querySelector(".resources_aside");
 const mainContent = document.querySelector(".resources_section");
 const timerAside = document.getElementById('resources_aside');
+const sideBarBtn = document.querySelector(".sidebar_btn")
 
 asideBtn.addEventListener("click", function () {
   asideResponsive.classList.toggle("show_aside");
@@ -26,6 +27,19 @@ asideBtn.addEventListener("click", function () {
   mainContent.classList.toggle("main_opacity");
   mainContent.classList.remove("main_opacity_remove");
   timerAside.style.display = 'block';
+});
+
+sideBarBtn.addEventListener("click", function(){
+  asideResponsive.classList.remove("show_aside");
+  asideResponsive.classList.add("hide_aside");
+  asideBtn.classList.remove("hide");
+  asideBtnBack.classList.remove("show");
+  mainContent.classList.toggle("main_opacity_remove");
+  mainContent.classList.remove("main_opacity");
+
+  setTimeout(function() {
+    timerAside.style.display = 'none';
+  }, 3000);
 });
 
 asideBtnBack.addEventListener("click", function () {
@@ -40,3 +54,18 @@ asideBtnBack.addEventListener("click", function () {
     timerAside.style.display = 'none';
   }, 3000);
 });
+
+// const loadersNow = document.getElementById("loader");
+
+// setTimeout(function() {
+//     if (loadersNow) {
+//         loadersNow.style.transition = 'opacity 0.5s';
+//         loadersNow.style.opacity = '0';
+//         setTimeout(function() {
+//             loadersNow.style.display = 'none';
+//         }, 500); // Wait for fade-out to finish
+//         console.log("gottem");
+//     } else {
+//         console.warn('Element with id \"loader\" not found.');
+//     }
+// }, 3000);

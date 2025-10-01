@@ -303,6 +303,9 @@ a.h1-home{
 
 
 /* Main Page-Specific CSS */
+/* header, footer{
+    display: none;
+} */
 .background-video{
     position: absolute;
     right: 0;
@@ -311,6 +314,50 @@ a.h1-home{
     height: auto;
     z-index: -1;
     object-fit: cover;
+}
+h1.loading{
+    display: block;
+    text-align: center;
+    width: 275px;
+    padding: 5px 0;
+    margin: 30vh auto 0 auto;
+    border-radius: 20px;
+    color: #202f39;
+    background-color: #8f8698a8;
+    
+}
+p.loading{
+    text-align: center;
+    color: #c8c1ce;
+    font-size: 1.2em;
+    margin: 40px 0;
+}
+h1.loading, p.loading{
+    opacity: 0;
+    animation: loaders 5s ease-in;
+}
+.ytvid_load{
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    animation: loaders 5s reverse;
+}
+@keyframes loaders {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@media screen and (max-width: 600px){
+    .ytvid_load{
+        width: 90%;
+        height: 275px;
+    }
+}
+@media screen and (max-width: 400px){
+    .ytvid_load{
+        width: 90%;
+        height: 200px;
+    }
 }
 /* END Main Page-Specific CSS */
 
