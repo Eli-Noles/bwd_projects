@@ -157,22 +157,6 @@ a.h1-home{
     .nav{
         display: none;
     }
-    /* .nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 70%;
-        right: 0;
-    }
-    .nav-left, .nav-right{
-        width: 40%;
-        flex: 1;
-        justify-self: space-evenly;
-    }
-    .nav_a{
-        text-align: center;
-        justify-content: center;
-    } */
     .nav_a1{
         margin-right: 3%;
     }
@@ -335,7 +319,7 @@ p.loading{
     text-align: center;
     color: #c8c1ce;
     font-size: 1.2em;
-    margin: 40px 0;
+    margin: 40px 1%;
 }
 h1.loading, p.loading{
     opacity: 0;
@@ -347,7 +331,7 @@ h1.loading, p.loading{
     left: 50vw;
     transform: translateX(-50%);
     animation: loaders 8s reverse;
-    width: 40%;
+    width: 40vw;
     height: fit-content;
 }
 .down_arrow{
@@ -384,6 +368,12 @@ p.anchor_expansion{
     0% {opacity: 1;}
     100% {opacity: 0;}
 }
+@media screen and (max-width: 1200px){
+    .ytvid_load{
+        width: 80vw;
+        height: 275px;
+    }
+}
 @media screen and (max-width: 600px){
     body{
         width: 100%;
@@ -394,6 +384,9 @@ p.anchor_expansion{
     }
     .anchor_img{
         width: 80%;
+    }
+    .down_arrow{
+        margin-top: 40px;
     }
 }
 @media screen and (max-width: 400px){
