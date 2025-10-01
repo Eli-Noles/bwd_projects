@@ -37,6 +37,9 @@ html{
     padding: 0;
     scroll-behavior: smooth;
     scroll-snap-align: start;
+
+    max-width: 100%;
+    overflow-x: hidden;
 }
 body{
     margin: 0;
@@ -44,6 +47,8 @@ body{
     scroll-behavior: smooth;
 
     background-color: #151F26;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 header{
     margin: -90px 2.5% 0px 2.5%;
@@ -334,29 +339,70 @@ p.loading{
 }
 h1.loading, p.loading{
     opacity: 0;
-    animation: loaders 5s ease-in;
+    animation: loaders 8s ease-in;
 }
 .ytvid_load{
     position: absolute;
     top: 30vh;
     left: 50vw;
     transform: translateX(-50%);
-    animation: loaders 5s reverse;
+    animation: loaders 8s reverse;
+    width: 40%;
+    height: fit-content;
+}
+.down_arrow{
+    margin-top: 120px;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.anchor_img{
+    width: 40%;
+    height: fit-content;
+    margin-top: 100px;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    border: 5px solid #202f39;
+}
+.anchor_expansion{
+    text-align: center;
+    color: #608096;
+    margin: 0 10%;
+}
+h3.anchor_expansion{
+    font-size: 1.7em;
+    text-shadow: 0 0 1.5px #ffffff;
+}
+p.anchor_expansion{
+    font-size: 1.15em;
+    margin-top: 10px;
 }
 @keyframes loaders {
     0% {opacity: 1;}
     100% {opacity: 0;}
 }
 @media screen and (max-width: 600px){
+    body{
+        width: 100%;
+    }
     .ytvid_load{
         width: 90%;
         height: 275px;
+    }
+    .anchor_img{
+        width: 80%;
     }
 }
 @media screen and (max-width: 400px){
     .ytvid_load{
         width: 90%;
         height: 200px;
+    }
+    .anchor_img{
+        width: 90%;
     }
 }
 /* END Main Page-Specific CSS */
@@ -640,11 +686,16 @@ quote#q4{
     width: 300px;
     right: 0;
 }
-.ytvideo{
+.a_tag_bottom{
+    text-align: center;
+    text-decoration: none;
     display: block;
-    margin: 20px auto 0 auto;
-    border: 5px solid #202f39;
-    border-radius: 20px;
+    margin: 20px auto;
+    padding: 5px 0;
+    border-radius: 15px;
+    width: 250px;
+    background-color: #608096;
+    color: #151F26;
 }
 p.credit{
     text-align: center;
@@ -731,10 +782,92 @@ p.credit{
         cursor: pointer;
     }
 }
-@media screen and (max-width: 500px){
-    .ytvideo{
-        width: 90%;
-        height: 200px;
+/* End Biblical Resources-Specific CSS */
+
+/* Get Involved-Specific CSS */
+.flexy{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.flexy2{
+    display: flex;
+    flex-direction: row;
+}
+.involved{
+    text-align: center;
+    margin: 0 5%;
+}
+h2.involved{
+    margin: 75px 5% 20px 5%;
+    color: #608096;
+    font-size: 1.75em;
+}
+p.involved{
+    color: #868197;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+#ii2{
+    width: 45vw;
+    margin: 30px 2.5%;
+}
+.involved_img{
+    display: block;
+    width: 35%;
+    height: fit-content;
+    margin: 30px 7.5%;
+}
+@media screen and (max-width: 1030px){
+    .flexy{
+        flex-direction: column;
+    }
+    .flexy2{
+        flex-direction: column;
+    }
+    .involved_img{
+        width: 75vw !important;
+        margin: 30px 12.5vw !important;
     }
 }
-/* End Biblical Resources-Specific CSS */
+/* End Get Involved-Specific CSS */
+
+/* My Hope & Mission-Specific CSS */
+.hope{
+    text-align: center;
+    margin: 20px 2.5%;
+}
+h1.hope{
+    color: aliceblue;
+}
+p.hope{
+    font-size: 1.25em;
+    color: rgb(150, 206, 255);
+}
+.flex_imghold{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.di1 p, .di2 p{
+    text-align: center;
+    color: #778288;
+    font-size: 1.2em;
+}
+.di1 img, .di2 img{
+    display: block;
+    width: 45vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 1160px){
+    .flex_imghold{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 500px){
+    .di1 img, .di2 img{
+        width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
